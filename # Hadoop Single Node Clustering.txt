@@ -1,0 +1,135 @@
+# Hadoop Single Node Clustering
+
+This repository provides instructions and resources for setting up a single-node Hadoop cluster for educational and development purposes. Hadoop is a distributed data processing framework, and a single-node cluster can serve as a learning environment or a starting point for development.
+
+## Prerequisites
+
+Before you get started, make sure you have the following prerequisites installed on your system:
+
+- Java Development Kit (JDK) 8 
+- Hadoop (the version you intend to use) recomended(3.3.6)
+- [Optional] Hadoop ecosystem components you want to work with (e.g., Hive, Pig, HBase)
+
+## Getting Started
+
+Follow these steps to set up and run a single-node Hadoop cluster:
+
+1. download the code from repository.
+
+2. Configuration steps :
+
+from haddop-3.3.6 / etc 
+
+  1) edit yarn-site.xml
+	add this configuration between <configuration> </configuration>
+
+
+
+	<configuration>
+	<property>
+  		<name>yarn.nodemanager.aux-services</name>
+  		<value>mapreduce_shuffle</value>
+	</property>
+
+	<property>
+  		<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+  		<value>org.apache.hadoop.mapred.ShuffleHandler</value>
+	</property>
+
+	<property>
+  		<name>yarn.resourcemanager.hostname</name>
+  		<value>127.0.0.1</value>
+	</property>
+
+	<property>
+  		<name>yarn.acl.enable</name>
+  		<value>0</value>
+	</property>
+
+	<property>
+	  <name>yarn.nodemanager.env-whitelist</name>
+	  <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PERPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME</value>
+	</property>
+
+	<property>
+ 		 <name>yarn.nodemanager.local-dirs</name>
+ 		 <value>datanode/hadoop/yarn/local</value>
+	</property>
+	<property>
+  		<name>yarn.nodemanager.log-dirs</name>
+  		<value>datanode/hadoop/yarn/log</value>
+	</property>
+
+	</configuration>
+
+
+
+  2) edit core-site.xml
+	add this configuration between <configuration> </configuration>
+
+	<configuration>
+	<property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://localhost:9000</value>
+	</property>
+	</configuration>
+
+
+
+  3) edit hdfs-site.xml
+	add this configuration between <configuration> </configuration>
+	
+	<configuration>
+	<property>
+		<name>dfs.replication</name>
+		<value>1</value>
+	</property>
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>C:\hadoop-3.3.6\data\namenode</value>
+	</property>
+	<property>
+		<name>dfs.datanode.data.dir</name>
+		<value>C:\hadoop-3.3.6\data\datanode</value>
+	</property>
+
+	</configuration>
+
+
+
+  4) edit mapred-site.xml
+	add this configuration between <configuration> </configuration>
+	
+	<configuration>
+	<property>
+		<name>mapreduce.framework.name</name>
+		<value>yarn</value>
+	</property>
+	</configuration>
+
+3. create local directory
+	location : hadoop-3.3.6/
+	1) create a local directory named data 
+	2) inside data dir create two more dir namenode & datanode
+
+4. commandline commands 
+	1) hadoop namenode -format : format and delete all the contents in namenode
+
+	2) go to haddop directory for me its :-  cd c:/haddop-3.3.6
+	
+	3) now go to sbin directiory :- cd sbin
+
+	4) now run this code start-dfs.cmd :- to start datanode and namenode to run in local machine
+
+	5) now run this code start-yarn.cmd :- to start resourcemanager and nodemanager
+
+	6) now type jps in cmd to list down all the ports at which all this deamons are running
+
+	7) make a directory to store the file we will upload in the server.:- hadoop fs -mkdir /input
+
+	8) now upload a file to the server with :- hadoop fs -put filename /input
+
+	9) now we will run the mapreduce jar file to get the reduced data form.
+		haddop jar filename.jar mainclass /input /output
+
+this will give you a file in /ouput folder in which you will get reduced form of the requested data.
