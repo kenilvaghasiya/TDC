@@ -1,3 +1,6 @@
+
+![Alt text](image.png)
+
 # CECS 574 Topics in Distributed Computing
 
 ## Course Details
