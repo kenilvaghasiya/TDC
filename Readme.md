@@ -203,7 +203,7 @@ Navigate to this location to bin/hadoop jar share/hadoop/mapreduce/hadoop-mapred
 
 Troubleshooting
 
-# If you encounter abrupt stops with datanode, namenode, resourcemanager, or nodemanager, it's likely due to misconfiguration or incompatible JDK versions. The configurations provided here are verified, but if issues persist, please contact for further assistance.
+### If you encounter abrupt stops with datanode, namenode, resourcemanager, or nodemanager, it's likely due to misconfiguration or incompatible JDK versions. The configurations provided here are verified, but if issues persist, please contact for further assistance.
 
 For additional support, reach out at
 
