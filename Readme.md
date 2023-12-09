@@ -1,7 +1,10 @@
 
-![Alt text](image.png)
+<p align="center">
+  <img src="image.png" alt="Alt text"/>
+</p>
 
-# CECS 574 Topics in Distributed Computing
+<h1 align="center">CECS 574 Topics in Distributed Computing</h1>
+
 
 ## Course Details
 
