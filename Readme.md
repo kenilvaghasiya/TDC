@@ -209,13 +209,6 @@ For additional support, reach out at
 
 dhruv.21patel01@gmail.com.
 
-# Credits
 
-Students of California State University
 
-- Dhruv jigneshkumar patel
-- Priya sunilkumar shah
-- Meet sunilkumar shah
-- Kenil vaghasiya
 
-- Guided By professor Pooria Yaghini
