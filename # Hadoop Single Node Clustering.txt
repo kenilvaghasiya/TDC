@@ -133,3 +133,11 @@ from haddop-3.3.6 / etc
 		haddop jar filename.jar mainclass /input /output
 
 this will give you a file in /ouput folder in which you will get reduced form of the requested data.
+# there may be some issue you find if you are working with hadoop with time 
+
+if datanode or namenode starts and abruptly stops then there is some misconfiguration or the jdk version is unsupported.
+if the resourcemanager and nodemanager also stops abruptly try the configuration agian.
+
+i have attached correct configuration in the read me file. my project worked on this same configuration.
+if you still face difficulties i will be happy to help to set up the configuration
+please contact me on dhruv.21patel01@gmail.com
