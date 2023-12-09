@@ -1,3 +1,20 @@
+# CECS 574 Topics in Distributed Computing
+
+## Course Details
+
+- **Instructor**: Dr. Pooria Yaghini
+- **Department**: Computer Engineering and Computer Science
+- **Term**: Fall 2023
+- **Institution**: California State University, Long Beach
+
+## Team Members
+
+1. **Dhruv Jigneshkumar patel** - ID: 030833684 - Email: [DhruvJigneshkumar.patel01@student.csulb.edu](mailto:DhruvJigneshkumar.patel01@student.csulb.edu)
+2. **Kenil Vaghasiya** - ID: 030747611 - Email: [kenilprakashbhai.vaghasiya01@student.csulb.edu](mailto:kenilprakashbhai.vaghasiya01@student.csulb.edu)
+3. **Priya Sunilkumar Shah** - ID: 030824675 - Email: [PriyaSunilkumar.Shah01@student.csulb.edu](mailto:PriyaSunilkumar.Shah01@student.csulb.edu)
+4. **Meet Sunilkumar Shah** - ID: 030824662 - Email: [Meet.Shah01@student.csulb.edu](mailto:Meet.Shah01@student.csulb.edu)
+
+
 # Hadoop Single Node Clustering
 
 This repository provides comprehensive guidelines for setting up a single-node Hadoop cluster, primarily for educational and development purposes. Hadoop, a powerful distributed data processing framework, can be effectively learned and tested in this simplified environment.
