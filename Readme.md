@@ -194,7 +194,12 @@ Execute these commands:
 
 ## Upload a file: hadoop fs -put <filename> /input
 
-## Run MapReduce job: hadoop jar <jarfile> <MainClass> /input /output
+- here the file refers to the data set which you can download from kaggle, to make  it simple download long data set with repeating words .
+
+## Run MapReduce job: Hadoop jar jar_name package_name.class_name  /input /output
+
+You will find a jar file in hadoop 3.3.6 folder or 
+Navigate to this location to bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.6.jar
 
 Troubleshooting
 
